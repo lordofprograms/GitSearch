@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/accountImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/dp15"
+        android:src="@android:drawable/ic_media_play" />
+
+    <TextView
+        android:id="@+id/accountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/accountImg"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_toEndOf="@+id/accountImg"
+        android:layout_toRightOf="@+id/accountImg"
+        android:text="Account name" />
+
+    <TextView
+        android:id="@+id/accountRepos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/accountName"
+        android:layout_alignStart="@+id/accountName"
+        android:layout_below="@+id/accountName"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="Public repos: x repos" />
+
+</RelativeLayout>
