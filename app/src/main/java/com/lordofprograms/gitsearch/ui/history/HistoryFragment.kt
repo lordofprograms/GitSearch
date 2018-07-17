@@ -15,6 +15,7 @@ import com.lordofprograms.gitsearch.presentation.history.HistoryView
 import com.lordofprograms.gitsearch.ui.history.adapter.HistoryAdapter
 import com.lordofprograms.gitsearch.utils.Injections
 import com.lordofprograms.gitsearch.utils.inflate
+import com.lordofprograms.gitsearch.utils.setToolbar
 import kotlinx.android.synthetic.main.history_fragment.*
 
 class HistoryFragment : Fragment(), HistoryView {
@@ -36,16 +37,7 @@ class HistoryFragment : Fragment(), HistoryView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        with(historyToolbar as Toolbar) {
-            title = getString(R.string.history)
-            with(activity as AppCompatActivity) {
-                setSupportActionBar(historyToolbar as Toolbar)
-                supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            }
-            setNavigationOnClickListener { activity.supportFragmentManager.popBackStack() }
-        }
-
+        setToolbar(activity, historyToolbar, getString(R.string.history), true)
         presenter?.loadRecyclerView()
     }
 

@@ -13,6 +13,7 @@ import com.lordofprograms.gitsearch.presentation.main.MainView
 import com.lordofprograms.gitsearch.ui.history.HistoryFragment
 import com.lordofprograms.gitsearch.utils.Injections
 import com.lordofprograms.gitsearch.utils.inflate
+import com.lordofprograms.gitsearch.utils.setToolbar
 import com.lordofprograms.gitsearch.utils.snackBar
 import kotlinx.android.synthetic.main.main_fragment.*
 
@@ -42,12 +43,7 @@ class MainFragment: Fragment(), MainView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        with(mainToolbar as Toolbar) {
-            title = getString(R.string.search)
-            with(activity as AppCompatActivity) {
-                setSupportActionBar(mainToolbar as Toolbar)
-            }
-        }
+        setToolbar(activity, mainToolbar, getString(R.string.search))
         setListener()
         setInfo(savedInstanceState)
     }
