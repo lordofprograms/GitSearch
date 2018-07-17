@@ -1,40 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id = "@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".screens.main.MainActivity">
+    tools:context=".ui.main.MainActivity">
 
-    <EditText
-        android:id="@+id/searchAccount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:imeOptions="actionSearch"
-        android:inputType="text"
-        android:layout_margin="@dimen/activity_horizontal_margin"/>
-
-    <ImageView
-        android:layout_below="@+id/searchAccount"
-        android:id="@+id/user_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        tools:text="Github UserName"
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_image"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/public_repos"
-        android:layout_below="@id/user_name"
-        android:layout_centerHorizontal="true" />
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
 
   </RelativeLayout>

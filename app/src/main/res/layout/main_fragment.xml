@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainFragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/mainToolbar"
+        layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/searchAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainToolbar"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:hint="@string/hint"
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_below="@+id/searchAccount"
+        android:layout_centerHorizontal="true"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userImage"
+        android:layout_centerHorizontal="true"
+        tools:text="Github UserName" />
+
+    <TextView
+        android:id="@+id/publicReposText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userNameText"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
